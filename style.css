@@ -16,31 +16,6 @@ body {
   flex-direction: column;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
-.site-header {
-  padding: 2rem 3rem 0;
-}
-
-.brand {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.tagline {
-  margin: 0.25rem 0 0;
-  color: #a0a0a0;
-}
-
 .signup-main {
   flex: 1;
   display: flex;
