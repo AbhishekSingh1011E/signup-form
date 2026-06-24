@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form | Create Your Account</title>
+  <meta name="description" content="A simple, accessible signup form built with semantic HTML and CSS, where you can create an account using your name, email, password, date of birth, and role.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="brand">AccioJob</h1>
+    <p class="tagline">Create an account to get started.</p>
+  </header>
+
+  <main class="signup-main">
+    <section class="signup-card" aria-labelledby="signup-heading">
+      <h2 id="signup-heading">Signup</h2>
+
+      <p class="status-message" id="status-message" role="status" aria-live="polite" hidden></p>
+
+      <form id="signup-form" novalidate>
+
+        <div class="field">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required autocomplete="name" aria-describedby="fullname-error">
+          <small class="error-message" id="fullname-error" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+          <small class="error-message" id="email-error" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" minlength="8" required autocomplete="new-password" aria-describedby="password-error password-hint">
+          <small class="field-hint" id="password-hint">Minimum 8 characters, with at least one letter and one number.</small>
+          <small class="error-message" id="password-error" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" minlength="8" required autocomplete="new-password" aria-describedby="confirm-password-error">
+          <small class="error-message" id="confirm-password-error" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required aria-describedby="dob-error">
+          <small class="error-message" id="dob-error" aria-live="polite"></small>
+        </div>
+
+        <fieldset class="field field-inline">
+          <legend>I am a</legend>
+          <label class="inline-label">
+            <input type="radio" name="role" value="student" required> Student
+          </label>
+          <label class="inline-label">
+            <input type="radio" name="role" value="employee" required> Employee
+          </label>
+          <small class="error-message" id="role-error" aria-live="polite"></small>
+        </fieldset>
+
+        <div class="field field-checkbox">
+          <label class="inline-label">
+            <input type="checkbox" id="terms" name="terms" required aria-describedby="terms-error">
+            I agree to all the <a href="#" target="_blank" rel="noopener">Terms and conditions</a>
+          </label>
+          <small class="error-message" id="terms-error" aria-live="polite"></small>
+        </div>
+
+        <button type="submit" class="submit-btn">Signup</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 AccioJob Signup Project. Built for learning purposes.</p>
+    <p><a href="#" target="_blank" rel="noopener">Privacy Policy</a> &middot; <a href="#" target="_blank" rel="noopener">Contact</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
